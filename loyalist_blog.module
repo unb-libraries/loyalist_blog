@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Loyalist Blog feature.
+ */
+
+include_once 'loyalist_blog.features.inc';
