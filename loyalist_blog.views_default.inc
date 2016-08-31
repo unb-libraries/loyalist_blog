@@ -115,12 +115,13 @@ function loyalist_blog_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
-  /* Field: Global: Custom text */
+  /* Field: Sidebar Blog description */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['ui_name'] = 'Sidebar Blog description';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Atlantic Loyalist Connections shares research experiences involving The Loyalist Collection and relations within the British colonial Atlantic world.
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<em>Atlantic Loyalist Connections</em> shares research experiences involving <em>The Loyalist Collection</em> and relations within the British colonial Atlantic world.
 
 <a href="/blog/feed"><img src="/misc/feed.png" alt="Subscribe to Atlantic Loyalist Connections" /></a>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
