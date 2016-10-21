@@ -19,29 +19,24 @@ function loyalist_blog_filter_default_formats() {
     'weight' => -10,
     'filters' => array(
       'filter_url' => array(
-        'weight' => -48,
+        'weight' => -50,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_autop' => array(
-        'weight' => -47,
+        'weight' => -49,
         'status' => 1,
         'settings' => array(),
       ),
       'media_filter' => array(
-        'weight' => -46,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'filter_htmlcorrector' => array(
-        'weight' => -45,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(),
       ),
       'image_resize_filter' => array(
-        'weight' => -44,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'link' => 0,
@@ -52,6 +47,11 @@ function loyalist_blog_filter_default_formats() {
             'remote' => 0,
           ),
         ),
+      ),
+      'filter_htmlcorrector' => array(
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
       ),
     ),
   );
