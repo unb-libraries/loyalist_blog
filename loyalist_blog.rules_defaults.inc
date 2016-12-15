@@ -17,7 +17,7 @@ function loyalist_blog_default_rules_configuration() {
       "ON" : { "comment_insert--comment_node_blog" : { "bundle" : "comment_node_blog" } },
       "DO" : [
         { "mail" : {
-            "to" : "k3y7@unb.ca",
+            "to" : "\\u003Ck3y7@unb.ca\\u003E",
             "subject" : "Loyalist: New Blog comment",
             "message" : "A new comment has been posted from [comment:hostname] and is awaiting approval. The direct address is:\\r\\n[comment:url]",
             "language" : [ "" ]
