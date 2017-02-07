@@ -10,15 +10,11 @@
 function loyalist_blog_wysiwyg_default_profiles() {
   $profiles = array();
 
-  // Exported profile: wysiwyg
+  // Exported profile: wysiwyg.
   $profiles['wysiwyg'] = array(
     'format' => 'wysiwyg',
     'editor' => 'ckeditor',
     'settings' => array(
-      'default' => 1,
-      'user_choose' => 0,
-      'show_toggle' => 0,
-      'add_to_summaries' => 1,
       'theme' => '',
       'language' => 'en',
       'buttons' => array(
@@ -68,6 +64,14 @@ function loyalist_blog_wysiwyg_default_profiles() {
       'advanced__active_tab' => 'edit-css',
       'forcePasteAsPlainText' => 0,
     ),
+    'preferences' => array(
+      'add_to_summaries' => FALSE,
+      'default' => 1,
+      'show_toggle' => 0,
+      'user_choose' => 0,
+      'version' => '4.6.0.5877d8b',
+    ),
+    'name' => 'formatwysiwyg',
     'rdf_mapping' => array(),
   );
 
