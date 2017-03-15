@@ -30,10 +30,31 @@ function loyalist_blog_menu_default_menu_links() {
     'weight' => 25,
     'customized' => 1,
   );
+  // Exported menu link: navigation_scheduled-posts:admin/config/content/scheduler/list.
+  $menu_links['navigation_scheduled-posts:admin/config/content/scheduler/list'] = array(
+    'menu_name' => 'navigation',
+    'link_path' => 'admin/config/content/scheduler/list',
+    'router_path' => 'admin/config/content/scheduler/list',
+    'link_title' => 'Scheduled Posts',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+      'identifier' => 'navigation_scheduled-posts:admin/config/content/scheduler/list',
+    ),
+    'module' => 'menu',
+    'hidden' => 0,
+    'external' => 0,
+    'has_children' => 0,
+    'expanded' => 0,
+    'weight' => -45,
+    'customized' => 1,
+  );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Blog');
+  t('Scheduled Posts');
 
   return $menu_links;
 }
