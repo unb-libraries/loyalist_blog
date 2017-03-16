@@ -188,6 +188,13 @@ function loyalist_blog_views_default_views() {
 
   /* Display: Archive Block */
   $handler = $view->new_display('block', 'Archive Block', 'block');
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'all entries';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '7';
@@ -207,8 +214,26 @@ function loyalist_blog_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'created_1',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
@@ -234,13 +259,25 @@ function loyalist_blog_views_default_views() {
   $handler->display->display_options['fields']['created']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
   $handler->display->display_options['fields']['created']['second_date_format'] = 'long';
+  /* Field: Month, Year */
+  $handler->display->display_options['fields']['created_1']['id'] = 'created_1';
+  $handler->display->display_options['fields']['created_1']['table'] = 'node';
+  $handler->display->display_options['fields']['created_1']['field'] = 'created';
+  $handler->display->display_options['fields']['created_1']['ui_name'] = 'Month, Year';
+  $handler->display->display_options['fields']['created_1']['label'] = '';
+  $handler->display->display_options['fields']['created_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['created_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['created_1']['date_format'] = 'custom';
+  $handler->display->display_options['fields']['created_1']['custom_date_format'] = 'F, Y';
+  $handler->display->display_options['fields']['created_1']['second_date_format'] = 'long';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Created year + month */
   $handler->display->display_options['arguments']['created_year_month']['id'] = 'created_year_month';
   $handler->display->display_options['arguments']['created_year_month']['table'] = 'node';
   $handler->display->display_options['arguments']['created_year_month']['field'] = 'created_year_month';
+  $handler->display->display_options['arguments']['created_year_month']['exception']['title_enable'] = TRUE;
   $handler->display->display_options['arguments']['created_year_month']['title_enable'] = TRUE;
-  $handler->display->display_options['arguments']['created_year_month']['title'] = 'Blog entries for %1';
+  $handler->display->display_options['arguments']['created_year_month']['title'] = '%1 blog entries';
   $handler->display->display_options['arguments']['created_year_month']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['created_year_month']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['created_year_month']['summary']['format'] = 'default_summary';
